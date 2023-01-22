@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.Domain", "TaskManager.Domain\TaskManager.Domain.csproj", "{E5730F3B-FD0D-4FF5-B68E-DA85F4FDFCE8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.Infrastructure", "TaskManager.Infrastructure\TaskManager.Infrastructure.csproj", "{02EDD137-B6CF-4FFA-91C0-3B68F570F676}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.Api", "TaskManager.Api\TaskManager.Api.csproj", "{E0C7C642-5DAD-4D94-A6F1-A6C866B1D92E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{E5730F3B-FD0D-4FF5-B68E-DA85F4FDFCE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5730F3B-FD0D-4FF5-B68E-DA85F4FDFCE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5730F3B-FD0D-4FF5-B68E-DA85F4FDFCE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02EDD137-B6CF-4FFA-91C0-3B68F570F676}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02EDD137-B6CF-4FFA-91C0-3B68F570F676}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02EDD137-B6CF-4FFA-91C0-3B68F570F676}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02EDD137-B6CF-4FFA-91C0-3B68F570F676}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0C7C642-5DAD-4D94-A6F1-A6C866B1D92E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0C7C642-5DAD-4D94-A6F1-A6C866B1D92E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0C7C642-5DAD-4D94-A6F1-A6C866B1D92E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0C7C642-5DAD-4D94-A6F1-A6C866B1D92E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

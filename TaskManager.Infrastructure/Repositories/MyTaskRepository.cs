@@ -4,13 +4,13 @@ using TaskManager.Domain.Repositories;
 
 namespace TaskManager.Infrastructure.Repositories;
 
-public class MyMyTaskRepository : IMyTaskRepository
+public class MyTaskRepository : IMyTaskRepository
 {
     private readonly ILiteCollectionAsync<MyTask> _collection;
 
-    public MyMyTaskRepository(ILiteCollectionAsync<MyTask> collection)
+    public MyTaskRepository(ILiteDatabaseAsync liteDatabaseAsync)
     {
-        _collection = collection;
+        _collection = liteDatabaseAsync.GetCollection<MyTask>("Tasks");
     }
 
     public async Task Register(MyTask myTask)
@@ -21,5 +21,15 @@ public class MyMyTaskRepository : IMyTaskRepository
     public async Task<IEnumerable<MyTask>> Find()
     {
         return await _collection.FindAllAsync();
+    }
+
+    public async Task Delete(string name)
+    {
+        await _collection.DeleteManyAsync(task => task.Title == name);
+    }
+
+    public async Task<IEnumerable<MyTask>> FindByDate(DateTime date)
+    {
+        return await _collection.FindAsync(task => task.Date == date);
     }
 }

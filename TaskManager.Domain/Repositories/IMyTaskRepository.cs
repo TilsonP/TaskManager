@@ -2,8 +2,10 @@
 
 namespace TaskManager.Domain.Repositories;
 
-public interface ITaskRepository
+public interface IMyTaskRepository
 {
     Task Register(MyTask myTask);
-    Task<List<MyTask>> Find();
+    Task<IEnumerable<MyTask>> Find();
+    Task Delete(string name);
+    Task<IEnumerable<MyTask>> FindByDate(DateTime date);
 }

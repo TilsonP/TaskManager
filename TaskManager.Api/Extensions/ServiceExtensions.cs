@@ -12,6 +12,7 @@ public static class ServiceExtensions
         var database = new LiteDatabaseAsync("Tasks.db");
         serviceCollection.AddSingleton<ILiteDatabaseAsync, LiteDatabaseAsync>(_ => database);
         serviceCollection.AddSingleton<IMyTaskRepository, MyTaskRepository>();
+        serviceCollection.AddSingleton<IAuthenticationRepository, AuthenticationRepository>();
     }
     
     public static void ConfigureApiUtils(this IServiceCollection services)
